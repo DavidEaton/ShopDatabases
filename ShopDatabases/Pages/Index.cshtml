@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center p-5">
+    <h1 class="display-4">Menominee Shop Databases</h1>
+    <p>Log in to <a href="https://menominee.azurewebsites.net/" target="_blank">Menominee app </a>(aka StockTrac - web).</p>
+</div>
+
+<div class="card-container d-flex justify-content-around">
+
+    <div class="card" style="width: 25%">
+        <div class="card-header">
+            Onboard Shop
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">New Shop</h5>
+            <p class="card-text">Adds a new Shop and creates their database in the cloud (Azure SQL Database).</p>
+            <p class="card-text">Adds a new Admin User account for the new Shop to manage their Menominee users. </p>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" asp-area="" asp-page="/Shops/OnboardShop">Onboard new Shop</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 25%">
+        <div class="card-header">
+            Edit Shop
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Existing Shop</h5>
+            <p class="card-text">Edit existing Shop details.</p>
+            <p class="card-text">Manage Shop user accounts that access the Menominee app.</p>
+            <p class="card-text">Upload/Update Shop logo for reports in the Menominee app.</p>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" asp-area="" asp-page="/Shops/EditShop">Edit existing Shop</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 25%">
+        <div class="card-header">
+            Exit Shop
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Existing Shop</h5>
+            <p class="card-text">Exit departing Shop.</p>
+            <p class="card-text">Disable Shop user accounts that access the Menominee app.</p>
+            <p class="card-text">Disable/Archive Shop Database and cloud storage account.</p>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-primary" asp-area="" asp-page="/Shops/ExitShop">Exit existing Shop</a>
+        </div>
+    </div>
+
+</div>
